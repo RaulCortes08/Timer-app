@@ -9,6 +9,7 @@ const upButton = document.getElementById("upButton");
 const downButton = document.getElementById("downButton");
 const resetButton = document.getElementById("resetButton");
 const startButton = document.getElementById("startButton");
+const stopButton = document.getElementById("stopButton");
 
 function updateDisplay() {
     minutesDisplay.textContent = String(minutes).padStart(2, "0");
@@ -39,13 +40,9 @@ resetButton.addEventListener("click", () => {
 });
 
 startButton.addEventListener("click", () => {
-    if (isRunning) {
-        clearInterval(timerInterval);
-        isRunning = false;
-        startButton.textContent = "START";
-    } else {
+    if (!isRunning) {
         isRunning = true;
-        startButton.textContent = "STOP";
+        startButton.textContent = "PAUSE";
         timerInterval = setInterval(() => {
             if (minutes === 0 && seconds === 0) {
                 clearInterval(timerInterval);
@@ -62,6 +59,12 @@ startButton.addEventListener("click", () => {
             }
         }, 1000);
     }
+});
+
+stopButton.addEventListener("click", () => {
+    clearInterval(timerInterval);
+    isRunning = false;
+    startButton.textContent = "START";
 });
 
 updateDisplay();
