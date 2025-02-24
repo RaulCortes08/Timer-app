@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c36;
+  color: white;
+  margin: 0;
+}
+
+.timer {
+  background: #3a3f4b;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.setButtons, .controlButtons {
+  margin-bottom: 15px;
+}
+
+button {
+  background: #61dafb;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #21a1f1;
+}
+
+.numbers {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+#stopButton {
+  background: #e63946;
+  color: white;
+}
+
+#stopButton:hover {
+  background: #c72c3b;
+}
+
+#resetButton {
+  background: #ffb703;
+}
+
+#resetButton:hover {
+  background: #e09c02;
+}/*# sourceMappingURL=styles.css.map */
