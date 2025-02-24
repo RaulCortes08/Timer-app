@@ -1,5 +1,5 @@
 import Timer from './timer.js';
-import './styles.scss';
+import './style.scss';
 
 document.addEventListener('DOMContentLoaded', () => {
   const startButton = document.getElementById('startButton');
